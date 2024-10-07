@@ -1,6 +1,7 @@
 from aiogram import Router
 
 from .commands import router as commands_router
+from .fallbacks import router as fallbacks_router
 
 router = Router(name=__name__)
-router.include_routers(commands_router)
+router.include_routers(commands_router, fallbacks_router)
