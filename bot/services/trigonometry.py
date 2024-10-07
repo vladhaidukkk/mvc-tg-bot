@@ -1,5 +1,5 @@
-from .base import BaseService
+from bot.abstractions import Service
 
 
-class TrigonometryService(BaseService):
+class TrigonometryService(Service):
     pass
