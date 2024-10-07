@@ -1,4 +1,4 @@
-from bot.abstractions import Service
+from bot.abstractions.service import Service
 
 
 class TextService(Service):

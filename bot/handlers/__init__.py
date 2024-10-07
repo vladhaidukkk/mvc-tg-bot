@@ -1,10 +1,6 @@
 from aiogram import Router
-from aiogram.filters import CommandStart
-from aiogram.types import Message
+
+from .commands import router as commands_router
 
 router = Router(name=__name__)
-
-
-@router.message(CommandStart())
-async def start_command_handler(message: Message) -> None:
-    await message.answer(f"Hello {message.from_user.full_name}")
+router.include_routers(commands_router)
